@@ -29,7 +29,6 @@ data = pd.read_csv('./Datasets/experiment.csv')
 # ax.scatter(data['age'] , data['physical_score'] , c=data['test_result'])
 #plt.show()
 
-
 # Seprating Label and Features
 X = data.drop('test_result' , axis=1)
 y = data['test_result']
@@ -50,8 +49,32 @@ from sklearn.linear_model import LogisticRegression
 model = LogisticRegression()
 model.fit(X_train , y_train)
 
-print(model.coef_)
+# Model's coefficients....
+# print(model.coef_) # [[-0.91916047  3.53009087]] 
 
-y_pred = model.predict(X_test) # Prediction in '0' or '1'
-y_pred = model.predict_proba(X_test) # returns probabilities of point belonging to a specific class
-y_pred = model.predict_log_proba(X_test) # returns log() of probability
+# Model's prediction
+# y_pred = model.predict(X_test) # Prediction in '0' or '1'
+# y_pred = model.predict_proba(X_test) # returns probabilities of datapoint belonging to a specific class
+# y_pred = model.predict_log_proba(X_test) # returns log() of probability
+
+#------------------------------------------------------------------------------------------------------
+
+# Importing metrics for classification task
+from sklearn.metrics import accuracy_score , confusion_matrix ,  classification_report 
+from sklearn.metrics import precision_score , recall_score
+# classification report contains precision , recall and f1-score
+
+y_pred = model.predict(X_test)
+
+# Accuracy Score
+# print(accuracy_score(y_test , y_pred))
+
+# Confusion Matix
+# print(confusion_matrix(y_test , y_pred))
+
+# Precision and Recall Scores
+print(precision_score(y_test , y_pred))
+print(recall_score(y_test , y_pred))
+
+# Classification Report
+# print(classification_report(y_test , y_pred))
