@@ -40,6 +40,7 @@ X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.25, rando
 # scaler = StandardScaler()
 # X_train = scaler.fit_transform(X_train)
 # X_test = scaler.transform(X_test)
+
 # ---------------------------------------------------------------------------------------------------------
 
 # Making on Model
@@ -70,6 +71,8 @@ GridSearchModel.fit(X_train , y_train)
     #'estimator__l1_ratio': np.float64(1.0),
     #'estimator__penalty': 'elasticnet'}
 
+# ---------------------------------------------------------------------------------------------------------
+
 # Predictions
 
 from sklearn.metrics import accuracy_score , precision_score , recall_score , confusion_matrix
@@ -87,6 +90,8 @@ print(confusion_matrix(y_test , y_pred))
 #  [ 0 11  0]
 #  [ 0  0 12]]
 
+# ---------------------------------------------------------------------------------------------------------
+
 # Test 
 test_data = pd.read_csv('./Datasets/iris_test.csv')
 
@@ -99,3 +104,5 @@ print(confusion_matrix(test_data['species'] , predictions))
 # [[4 0 0]
 #  [0 2 1]
 #  [0 0 3]]
+
+# ---------------------------------------------------------------------------------------------------------
