@@ -1,11 +1,9 @@
 # Multiclass Logicstic Regression
 
-from tkinter import Grid
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns 
-from sklearn import datasets
 from sklearn.multiclass import OneVsRestClassifier
 
 data = pd.read_csv('./Datasets/iris.csv')
@@ -56,10 +54,10 @@ OVR_MODEL  = OneVsRestClassifier(estimator=LogisticRegression(solver='saga' , ma
 warnings.filterwarnings("ignore", message="l1_ratio parameter is only used when penalty is 'elasticnet'")
 
 params_grid = {
-    'estimator__penalty': ['elasticnet'],
+    'estimator__penalty': ['l1' ,'l2' , 'elasticnet'],
     'estimator__l1_ratio': np.linspace(0, 1, 20),
     'estimator__C': np.linspace(0.01, 2, 20)  
-}
+} 
 
 GridSearchModel = GridSearchCV(estimator=OVR_MODEL , param_grid=params_grid)
 GridSearchModel.fit(X_train , y_train)
