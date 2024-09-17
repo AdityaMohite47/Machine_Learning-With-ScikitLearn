@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.linear_model import HuberRegressor 
 
 # importing dataset : Health experiment based on age and physical test scores
 # Passing test is '1' while not passing is '0' in the test_result column

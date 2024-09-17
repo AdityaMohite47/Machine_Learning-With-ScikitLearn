@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns 
-from sklearn.multiclass import OneVsRestClassifier
 import warnings
 
 # This database contains 14 physical attributes based on physical testing of a patient. 
@@ -112,7 +111,7 @@ print(precision_score(y_test , y_pred))
 print(recall_score(y_test , y_pred ))
 # precision and recall both 0.84
 
-print(confusion_matrix(y_test , y_pred)) # allover 16 wrong predictions...
+print(confusion_matrix(y_test , y_pred)) # all-over 16 wrong predictions...
 # [[33  8]
 #  [ 8 42]]
 
