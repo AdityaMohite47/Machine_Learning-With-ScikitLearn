@@ -1,3 +1,4 @@
+# Support Vector Classifier
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -25,3 +26,9 @@ model.fit(X , y)
 plot_svm_boundary(model , X , y) 
 # This 3-rd party function helps us to visualize hyperplane made by the kernel 
 # It also highlights the support vectors and margins/soft-margins...
+
+# epsilon 
+# with the kernel being 'rbf' we have to watch for gamma param.
+# Gamma value means that how much influence a data point has.
+# C value means the regularization value
+# ( in sklearn it's meaning in inverted i.e bigger the value less the limit and vise-versa)
