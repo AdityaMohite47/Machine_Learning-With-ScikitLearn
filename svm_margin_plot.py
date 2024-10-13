@@ -5,7 +5,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-def plot_svm_boundary(model,X,y):
+def plot_svc_boundary(model,X,y):
     
     X = X.values
     y = y.values

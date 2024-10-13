@@ -7,3 +7,4 @@
     - Matplotlib
     - Seaborn
     - ScikitLearn
+    - Jupyter (either from official source or vs-code extension to run notebooks.)
