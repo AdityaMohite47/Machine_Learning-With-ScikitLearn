@@ -1,1 +1,1 @@
-## Repository for all Machine Learning models I made while learning on Algorithms of Machine Learning.
+## Repository for all Machine Learning Jupyter notebooks I made while learning Algorithms of Machine Learning.
